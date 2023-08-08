@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <main>
+        <section class="bodyContainer">
+
+            <div class="contenedor">
+                <h1>Postres</h1>
+
+                <div class="cardPostre" id="caja1">
+                    <figure>
+                        <img src="./img/Panquefresa.jpg" alt="">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Cupcake</h3>
+                        <p>Cupcake blanco y rojo con glaseado arriba. Precio $120 </p>
+                        <input type="number" id="numeroEntrada" placeholder="Ingresa cantidad">
+                        <button onclick="calcularCupcake()">Comprar</button>
+                        <p>Costo $</p>
+                        <p id="mensajeCupcake"></p>
+                    </div>
+
+                </div>
+
+                <div class="cardPostre" id="caja2">
+                    <figure>
+                        <img src="./img/Pastel.jpg" alt="">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Pastel</h3>
+                        <p>Pastel marrón y blanco con fresas encima. Precio $259</p>
+                        <input type="number" id="numeroEntradaPastel" placeholder="Ingresa cantidad">
+                        <button onclick="calcularPastel()">Comprar</button>
+                        <p>Costo $</p>
+                        <p id="mensajePastel"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="cardPostre" id="caja3">
+                    <figure>
+                        <img src="./img/Biscocho.jpg" alt="">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Bizcocho</h3>
+                        <p>Bizcocho de chocolate. Precio $179</p>
+                        <input type="number" id="numeroEntradaBizcocho" placeholder="Ingresa cantidad">
+                        <button onclick="calcularBizcocho()">Comprar</button>
+                        <p>Costo $</p>
+                        <p id="mensajeBizcocho"></p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h3>Llene a continuación los siguientes datos</h3>
+                <button onclick="calcularTotal()">Mostrar total</button>
+            </div>
+
+            <form action="" id="formulario">
+
+                <h2>Formulario de registro</h2>
+                <div class="agrupacion">
+                    <label for="name" id="">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="agrupacion">
+                    <label for="telefono" id="">Telefono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                    <div class="error-message" id="telefonoError"></div>
+
+                </div>
+
+                <div class="agrupacion">
+                    <label for="direccion" id="">Direccion:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                    <div class="error-message" id="direccionError"></div>
+                    <p>Total a pagar:</p><p id="consulta"></p>
+                    <br>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="mensaje"></p>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

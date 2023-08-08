@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #ee9ca7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde15b, #ee9ca7d1), url(../img/Fondo.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde15d, #ee9ca7d0), url(../img/Fondo.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor {
+    display: grid;
+    justify-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.cardPostre {
+    width: 300px;
+    /* width: 100%; */
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ddd;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    /*  cursor: pointer; */
+    transition: all 400ms ease;
+    /*  max-width: 1100px; */
+}
+
+.cardPostre:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.cardPostre img {
+    width: 100%;
+    height: 250px;
+}
+
+.cardPostre .contenido {
+    padding: 10px;
+    text-align: justify;
+}
+
+.cardPostre .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+input {
+    width: 50%;
+    border-color: #eee;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+input:hover {
+    background: #ddd;
+}
+
+button {
+    padding: 8px;
+    background: #E9E4F0;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #f12711;
+    color: #fff;
+}
+
+.cardPostre .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Form */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+#formulario {
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    border-top: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+    box-shadow: 5px 5px 12px #00000035;
+    background: #ffffff25;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(9px);
+    font-weight: bold;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type ="text"]
+{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
