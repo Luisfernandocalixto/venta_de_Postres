@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,18 +17,19 @@ body {
     background-size: cover;
 }
 
-main {
+
+.contenedor-c {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    place-content: center;
 }
 
-.contenedor {
-    display: grid;
-    justify-items: center;
-}
 
 h1 {
     text-align: center;
+    font-size: 40px;
 }
 
 .cardPostre {
@@ -47,9 +50,15 @@ h1 {
 
 }
 
+.espacio{
+    margin-top: 10px;
+}
+
 .cardPostre img {
     width: 100%;
+    object-fit: cover;
     height: 250px;
+    aspect-ratio: 640/960;
 }
 
 .cardPostre .contenido {
@@ -63,10 +72,11 @@ h1 {
 }
 
 input {
-    width: 50%;
+    width: 100%;
     border-color: #eee;
     padding: 8px;
     border-radius: 8px;
+    outline: none;
 }
 
 input:hover {
@@ -77,10 +87,12 @@ button {
     padding: 8px;
     background: #E9E4F0;
     border-radius: 8px;
+    width: 100%;
+    border: 1px solid #fdf3f4;
 }
 
 button:hover {
-    background: #f12711;
+    background: #a82848;
     color: #fff;
 }
 
@@ -97,9 +109,10 @@ button:hover {
 }
 
 #formulario {
+    width: 700px;
     padding: 20px;
     display: grid;
-    justify-items: center;
+    /* justify-items: center; */
     border-top: 2px solid #ddd;
     border-left: 2px solid #ddd;
     box-shadow: 5px 5px 12px #00000035;
@@ -110,19 +123,27 @@ button:hover {
     font-weight: bold;
 }
 
-.form-group{
+.form-group {
     margin-bottom: 15px;
 }
 
-label{
+label {
     display: block;
     margin-bottom: 5px;
 }
 
-input[type ="text"]
-{
+input[type="text"] {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
 
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+.tamano{
+    width: 300px;
+    
 }

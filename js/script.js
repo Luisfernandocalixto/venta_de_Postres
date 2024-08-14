@@ -1,3 +1,4 @@
+
 let numeroEntrada = document.getElementById('numeroEntrada');
 let numeroEntrada2 = document.getElementById('numeroEntradaPastel');
 let numeroEntrada3 = document.getElementById('numeroEntradaBizcocho');
@@ -23,7 +24,7 @@ function calcularCupcake() {
         return
     }
     let resultado = eval(numeroIngresado * precio)
-    mensajeCupcake.textContent = resultado
+    mensajeCupcake.textContent = '$ ' + resultado
     producto = true
     valores.unshift(resultado)
 
@@ -38,7 +39,7 @@ function calcularPastel() {
         return
     }
     let resultado = eval(numeroIngresado * precio)
-    mensajePastel.textContent = resultado
+    mensajePastel.textContent = '$ ' + resultado
     producto2 = true
     valores.unshift(resultado)
 
@@ -52,13 +53,18 @@ function calcularBizcocho() {
         return
     }
     let resultado = eval(numeroIngresado * precio)
-    mensajeBizcocho.textContent = resultado
+    mensajeBizcocho.textContent = '$ ' + resultado
     producto3 = true
     valores.unshift(resultado)
 
 }
 
+let venta = document.getElementById('venta')
+let body = document.querySelector('body')
+venta.style.display = 'none'
 function calcularTotal() {
+    venta.style.display = 'block'
+
 
     let sum = valores.reduce((acumulador, numeros) => {
         return acumulador + numeros
@@ -68,7 +74,7 @@ function calcularTotal() {
 
 /* Datos de formulario */
 
-document.getElementById('formulario').addEventListener('submit', (event) => {
+document.getElementById('formulario').addEventListener('submit', function (event) {
     event.preventDefault()
 
     // validar campo de nombre
@@ -115,7 +121,8 @@ document.getElementById('formulario').addEventListener('submit', (event) => {
 
     if (!errorNombre.textContent && !errorTelefono.textContent && !errorDireccion.textContent) {
 
-        mensaje.textContent = 'Los datos se han enviado con exito'
+        venta.style.display = 'none';
+        mostrarAlerta();
         document.getElementById('formulario').reset();
 
 
@@ -124,3 +131,25 @@ document.getElementById('formulario').addEventListener('submit', (event) => {
 
 })
 
+async function mostrarAlerta() {
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    toastr.success('¡Los datos se han enviado con éxito');
+
+}
